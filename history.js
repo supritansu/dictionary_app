@@ -11,13 +11,14 @@ reversedDefinitions.forEach((definition, index) => {
     definitionContainer.className = "history-entry";
 
     const definitionHtml = `
+    <div class="definition">
         <h3>Word: ${definition.word}</h3>
         <div>${definition.definition}</div>
         <button class="delete-button" onclick="deleteDefinition(${index})">
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash-alt"></i> Delete
         </button>
-    `;
-
+    </div>
+`;
     definitionContainer.innerHTML = definitionHtml;
     historyList.appendChild(definitionContainer);
 });
